@@ -34,7 +34,95 @@
       </div>
     </header>
 
-    <main class="form-main"></main>
+    <main class="form-main">
+
+      <h1 class="visually-hiden">Форма анкеты</h1>
+
+      <section class="program-selection">
+        <h2 class="program-selection__heading">Подбор программы</h2>
+
+        <b class="program-selection__title">Заполните анкету и мы подберем программу питания для вашего кота</b>
+        <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="program-selection__characteristics-fieldset">
+            <legend class="visually-hiden">Характеристики вашего кота</legend>
+            <ul class="program-selection__characteristics-list">
+              <li class="program-selection__characteristics-item">
+                <label for="name" class="program-selection__name-label">Имя:*</label>
+                <input type="text" class="program-selection__name-input" id="name" placeholder="Барсик" required>
+              </li>
+              <li class="program-selection__characteristics-item">
+                <label for="weight" class="program-selection__weight-label">Вес (кг):*</label>
+                <input type="text" class="program-selection__weight-input" id="weight" placeholder="7" required>
+              </li>
+              <li class="program-selection__characteristics-item">
+                <label for="age" class="program-selection__age-label">Возраст (лет):</label>
+                <input type="text" class="program-selection__age-input" id="age" placeholder="7">
+              </li>
+            </ul>
+
+            <ul class="program-selection__targets-list">
+              <li class="program-selection__targets-item">
+                <input type="radio" class="program-selection__targets-input" name="target" value="Похудение" id ="losing">
+                <label for="losing" class="program-selection__targets-label">Похудение</label>
+              </li>
+              <li class="program-selection__targets-item">
+                <input type="radio" class="program-selection__targets-input" name="target" value="Набор массы" id ="gain">
+                <label for="gain" class="program-selection__targets-label">Набор массы</label>
+              </li>
+              <li class="program-selection__targets-item">
+                <input type="radio" class="program-selection__targets-input" name="target" value="Не знаю" id ="answer">
+                <label for="answer" class="program-selection__targets-label">Не знаю (Нужен ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="program-selection__contacts-fieldset">
+            <legend class="program-selection__contacts-legend">Контактные данные (владельца кота)</legend>
+            <ul class="program-selection__contacts-list">
+              <li class="program-selection__contacts-item">
+                <label for="email" class="program-selection__contacts-label">E-mail:*</label>
+                <input type="email" class="program-selection__contacts-input" id="email" placeholder="kuklachev@gmail.com" required>
+              </li>
+              <li class="program-selection__contacts-item">
+                <label for="phone" class="program-selection__contacts-label">Телефон:*</label>
+                <input type="phone" class="program-selection__contacts-input" id="phone" placeholder="8 (960) 900-60-90" required>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="program-selection__comment-fieldset">
+            <legend class="program-selection__comment-legend">Комментарий</legend>
+            <textarea class="program-selection__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+
+          <fieldset class="program-selection__additional-fieldet">
+            <legend class="program-selection__additional-legend">Дополнительно</legend>
+            <ul class="program-selection__additional-list">
+              <li class="program-selection__additional-item">
+                <input type="checkbox" class="program-selection__additional-input" name="additional" value="Сахарозаменитель" id="sweetener" checked>
+                <label for="sweetener" class="program-selection__additional-label">Сахарозаменитель</label>
+              </li>
+              <li class="program-selection__additional-item">
+                <input type="checkbox" class="program-selection__additional-input" name="additional" value="Питьевая вода" id="water">
+                <label for="water" class="program-selection__additional-label">Питьевая вода</label>
+              </li>
+              <li class="program-selection__additional-item">
+                <input type="checkbox" class="program-selection__additional-input" name="additional" value="Молоко" id="milk">
+                <label for="milk" class="program-selection__additional-label">Молоко</label>
+              </li>
+              <li class="program-selection__additional-item">
+                <input type="checkbox" class="program-selection__additional-input" name="additional" value="Витамины" id="vitamins">
+                <label for="vitamins" class="program-selection__additional-label">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button type="submit" class="program-selection__button">Отправить заявку</button>
+          <span class="program-selection__required">* — Обязательные поля</span>
+        </form>
+      </section>
+
+    </main>
 
     <footer class="page-footer">
       <b class="page-footer__invite">приглашаем к сотрудничеству дилеров!</b>
