@@ -1,0 +1,82 @@
+.examples {
+  background-color: #f2f2f2;
+
+  padding-top: 21px;
+  padding-bottom: 35px;
+}
+
+.examples__heading {
+  @include font-oswald;
+  @include font(36, 60, normal);
+
+  margin: 0;
+  margin-bottom: 22px;
+}
+
+.examples__description {
+  @include font(14, 18, normal);
+  font-family: "Arial", sans-serif;
+  color: $grey;
+
+  width: 270px;
+  margin: 0;
+  margin-bottom: 27px;
+}
+
+.examples__item {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+
+  position: relative;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+
+  width: 122px;
+  margin-bottom: 35px;
+}
+
+.examples__item:first-of-type {
+  margin-right: 29px;
+}
+
+.expamples__count {
+  @include font-oswald;
+  @include font(24, 24, normal);
+  text-transform: uppercase;
+
+  display: block;
+
+  padding-top: 16px;
+  padding-bottom: 18px;
+}
+
+.exmaples__subtitle {
+  @include font(12, 12, normal);
+  font-family: "Arial", sans-serif;
+  color: $grey;
+
+  display: block;
+  text-align: center;
+
+  background-color: #f2f2f2;
+
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -41px;
+
+  width: 82px;
+}
+
+.examples__expenses {
+  @include font-oswald;
+  @include font(14, 20, normal);
+  text-transform: uppercase;
+
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 44px;
+}
