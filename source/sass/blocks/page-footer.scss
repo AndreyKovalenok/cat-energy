@@ -3,7 +3,7 @@
 }
 
 .page-footer__top {
-  padding: 0 20px 24px;;
+  padding: 0 20px 24px;
 }
 
 .page-footer__invite {
@@ -22,8 +22,8 @@
   display: inline-block;
   vertical-align: middle;
 
-  font-family: 'Arial', sans-serif;
   @include font(14, 20, normal);
+  font-family: "Arial", sans-serif;
   color: $grey;
 
   width: 140px;
@@ -86,16 +86,16 @@
     margin-left: -11px;
   }
 
-  &--vk::before{
-    background-image: url(../../img/icon-vk.svg);
+  &--vk::before {
+    background-image: url("../../img/icon-vk.svg");
   }
 
-  &--instagram::before{
-    background-image: url(../../img/icon-insta.svg);
+  &--instagram::before {
+    background-image: url("../../img/icon-insta.svg");
   }
 
-  &--facebook::before{
-    background-image: url(../../img/icon-fb.svg);
+  &--facebook::before {
+    background-image: url("../../img/icon-fb.svg");
   }
 }
 
@@ -108,8 +108,8 @@
 .page-footer__link-academy {
   display: block;
 
-  font-family: 'Arial', sans-serif;
   @include font(16 ,16, normal);
+  font-family: "Arial", sans-serif;
   color: $grey;
 
   padding: 31px 0;

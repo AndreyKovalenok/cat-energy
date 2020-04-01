@@ -30,24 +30,24 @@
   &--losing::before,
   &--gain::before {
     content: "";
-      position: absolute;
+    position: absolute;
 
-      height: 53px;
-      width: 67px;
+    height: 53px;
+    width: 67px;
   }
 
   &--losing::before {
-    background: url(../../img/icon-cat-slim.svg) no-repeat center center;
+    background-image: url("../../img/icon-cat-slim.svg") no-repeat center center;
   }
 
   &--gain::before {
-    background: url(../../img/icon-cat-pro.svg) no-repeat center center;
+    background: url("../../img/icon-cat-pro.svg") no-repeat center center;
   }
 }
 
 .programs__description {
-  font-family: 'Arial', sans-serif;
   @include font(14, 18, normal);
+  font-family: "Arial", sans-serif;
   color: $grey;
 
   border-bottom: 1px solid #d9d9d9;

@@ -27,12 +27,11 @@
   margin: 0;
   margin-top: 22px;
   margin-bottom: 17px;
-
 }
 
 .products__table {
-  font-family: 'Arial', sans-serif;
   @include font(12, 16, normal);
+  font-family: "Arial", sans-serif;
   color: $grey;
 
   width: 140px;
@@ -64,7 +63,7 @@
     left: 50%;
     top: 26px;
 
-    background: url(../../img/icon-plus-mobile.svg) no-repeat;
+    background: url("../../img/icon-plus-mobile.svg") no-repeat;
     opacity: 0.2;
 
     width: 30px;
@@ -86,8 +85,8 @@
 }
 
 .products__more-subtitile {
-  font-family: 'Arial', sans-serif;
   @include font(12, 16, normal);
+  font-family: "Arial", sans-serif;
 
   text-align: center;
 

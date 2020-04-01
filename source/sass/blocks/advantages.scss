@@ -19,8 +19,8 @@
 }
 
 .advantages__item {
-  font-family: 'Arial', sans-serif;
   @include font(14, 18, normal);
+  font-family: "Arial", sans-serif;
   color: $grey;
 
   position: relative;
@@ -29,19 +29,19 @@
   margin-bottom: 30px;
 
   &--healthy::before {
-    background: url(../../img/advantage-leaf@1x.png) no-repeat center center;
+    background: url("../../img/advantage-leaf@1x.png") no-repeat center center;
   }
 
   &--powder::before {
-    background: url(../../img/advantage-powder@1x.png) no-repeat center center;
+    background: url("../../img/advantage-powder@1x.png") no-repeat center center;
   }
 
   &--food::before {
-    background: url(../../img/advantage-dining@1x.png) no-repeat center center;
+    background: url("../../img/advantage-dining@1x.png") no-repeat center center;
   }
 
   &--changes::before {
-    background: url(../../img/advantage-clock@1x.png) no-repeat center center;
+    background: url("../../img/advantage-clock@1x.png") no-repeat center center;
   }
 
   &::before {
