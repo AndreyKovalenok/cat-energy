@@ -1,0 +1,71 @@
+.programs {
+  padding-top: 22px;
+}
+
+.programs__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.programs__item {
+  background-color: #f2f2f2;
+
+  margin-bottom: 20px;
+  padding: 39px 20px 0 21px;
+}
+
+.programs__heading {
+  @include font-oswald;
+  @include font(24, 37, normal);
+  text-transform: uppercase;
+
+  position: relative;
+
+  margin: 0;
+  margin-left: 53px;
+  margin-bottom: 34px;
+
+  &--losing::before,
+  &--gain::before {
+    content: "";
+      position: absolute;
+
+      height: 53px;
+      width: 67px;
+  }
+
+  &--losing::before {
+    background: url(../../img/icon-cat-slim.svg) no-repeat center center;
+  }
+
+  &--gain::before {
+    background: url(../../img/icon-cat-pro.svg) no-repeat center center;
+  }
+}
+
+.programs__description {
+  font-family: 'Arial', sans-serif;
+  @include font(14, 18, normal);
+  color: $grey;
+
+  border-bottom: 1px solid #d9d9d9;
+
+  margin: 0;
+  padding-bottom: 21px;
+}
+
+.programs__link {
+  @include font-oswald;
+  @include font(16, 16, normal);
+  text-transform: uppercase;
+  color: #000000;
+
+  display: block;
+
+  width: 100%;
+
+  padding-top: 20px;
+  padding-bottom: 23px;
+}
