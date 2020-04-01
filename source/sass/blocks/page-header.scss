@@ -1,0 +1,42 @@
+.page-header {
+  @include font-oswald;
+}
+
+.page-header__title {
+  @include font(36, 36, normal);
+  color: #ffffff;
+
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.page-header__subtitle {
+  @include font(14, 14, normal);
+  text-transform: uppercase;
+  color: #ffffff;
+
+  text-align: center;
+
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.page-header__img {
+  display: block;
+  margin: 0 auto;
+}
+
+.page-header__bottom {
+  background: url("../../img/index-background-mobile@1x.jpg") no-repeat;
+
+  padding-top: 29px;
+}
+
+.page-header__select-program {
+  @include font(14, 18, normal);
+
+  padding-top: 12px;
+  padding-bottom: 9px;
+}
