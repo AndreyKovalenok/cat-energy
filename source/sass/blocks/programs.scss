@@ -37,11 +37,11 @@
   }
 
   &--losing::before {
-    background-image: url("../../img/icon-cat-slim.svg") no-repeat center center;
+    background: url("../img/icon-cat-slim.svg") no-repeat center center;
   }
 
   &--gain::before {
-    background: url("../../img/icon-cat-pro.svg") no-repeat center center;
+    background: url("../img/icon-cat-pro.svg") no-repeat center center;
   }
 }
 
