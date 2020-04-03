@@ -1,17 +1,13 @@
-.advantages {
-  padding-bottom: 15px;
-}
 
 .advantages__heading {
   @include font-oswald;
-  @include font(36, 60, normal);
 
   margin: 0;
-  margin-bottom: 23px;
 }
 
-
 .advantages__list {
+  display: flex;
+
   list-style: none;
 
   margin: 0;
@@ -19,14 +15,10 @@
 }
 
 .advantages__item {
-  @include font(14, 18, normal);
   font-family: "Arial", sans-serif;
   color: $grey;
 
   position: relative;
-
-  margin-left: 80px;
-  margin-bottom: 30px;
 
   &--healthy::before {
     background: url("../img/advantage-leaf@1x.png") no-repeat center center;
@@ -47,11 +39,69 @@
   &::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: -80px;
 
-    width: 60px;
-    height: 60px;
     background-color: $green;
+  }
+}
+
+@media (max-width: 767px) {
+  .advantages {
+    padding: 0 20px 15px;
+  }
+
+  .advantages__heading {
+    @include font(36, 60, normal);
+
+    margin-bottom: 23px;
+  }
+
+  .advantages__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .advantages__item {
+    @include font(14, 18, normal);
+
+    width: 195px;
+    margin-left: 80px;
+    margin-bottom: 30px;
+
+    &::before {
+      top: 0;
+      left: -80px;
+
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .advantages__heading {
+    @include font(60, 60, normal);
+
+    margin-bottom: 63px;
+  }
+
+  .advantages__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    @include font(16, 24, normal);
+
+    width: 305px;
+    margin-bottom: 87px;
+    padding: 113px 60px 44px 0;
+
+    &::before {
+      top: 0;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+    }
   }
 }

@@ -1,11 +1,27 @@
 .catalog-main__heading {
   @include font-oswald;
-  @include font(36, 60, normal);
-  text-align: center;
-
-  border-bottom: 1px solid #ededed;
 
   margin: 0;
-  padding-top: 19px;
-  padding-bottom: 23px;
+}
+
+@media (max-width: 767px) {
+  .catalog-main__heading {
+    @include font(36, 60, normal);
+    text-align: center;
+
+    border-bottom: 1px solid #ededed;
+
+    padding-top: 19px;
+    padding-bottom: 23px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog-main__heading {
+    @include font(60, 60, normal);
+
+    padding-top: 66px;
+    padding-left: 30px;
+    margin-bottom: 25px;
+  }
 }
