@@ -86,14 +86,14 @@
     margin-bottom: 39px;
   }
 
-  .additional__item  {
+  .additional__item {
     border-bottom: 1px solid #cdcdcd;
 
     padding-top: 14px;
     padding-bottom: 17px;
   }
 
-  .additional__item-heading  {
+  .additional__item-heading {
     @include font(16, 16, normal);
 
     margin-bottom: 16px;
@@ -112,7 +112,7 @@
     padding: 13px 0;
   }
 
-  .addition__action  {
+  .addition__action {
     background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center center;
     text-align: center;
 
@@ -162,7 +162,7 @@
     margin-bottom: 69px;
   }
 
-  .addition__action  {
+  .addition__action {
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center center;
 
     width: 708px;
@@ -226,6 +226,8 @@
 
   .additional__heading {
     margin-bottom: 76px;
+
+    flex-grow: 1;
   }
 
   .additional__list {
@@ -241,10 +243,6 @@
     border-bottom: 1px solid #e6e6e6;
 
     padding: 15px 0;
-  }
-
-  .additional__heading {
-    flex-grow: 1;
   }
 
   .additional__count {
