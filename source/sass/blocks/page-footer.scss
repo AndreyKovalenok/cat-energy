@@ -240,8 +240,11 @@
 }
 
 @media (min-width: 1220px) {
-  .page-footer {
+  .page-footer__top-wrap {
     position: relative;
+
+    width: 1440px;
+    margin: 0 auto;
   }
 
   .page-footer__map {
