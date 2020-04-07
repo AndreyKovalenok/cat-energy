@@ -9,4 +9,13 @@
 
   width: 280px;
   margin: 0 auto;
+
+  &:hover,
+  &:active {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba($color: $white, $alpha: 0.3)
+  }
 }
