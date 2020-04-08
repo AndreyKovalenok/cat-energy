@@ -1,24 +1,35 @@
+.advantages {
+  padding: 15px 20px 20px;
+}
 
 .advantages__heading {
   @include font-oswald;
+  @include font-prop(36, 60);
 
   margin: 0;
+  margin-bottom: 30px;
 }
 
 .advantages__list {
-  display: flex;
-
   list-style: none;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
 .advantages__item {
-  font-family: "Arial", sans-serif;
+  @include font-arial;
+  @include font-prop(14, 18);
   color: $grey;
 
   position: relative;
+  width: 195px;
+  margin-left: 80px;
+  margin-bottom: 26px;
 
   &--healthy::before {
     background: url("../img/advantage-leaf@1x.png") no-repeat center center;
@@ -38,48 +49,28 @@
 
   &::before {
     content: "";
-    position: absolute;
-
     background-color: $green;
+
+    position: absolute;
+    top: -2px;
+    left: -80px;
+    width: 60px;
+    height: 60px;
   }
 }
 
-@media (max-width: 767px) {
-  .advantages {
-    padding: 0 20px 15px;
-  }
-
-  .advantages__heading {
-    @include font(36, 60, normal);
-
-    margin-bottom: 23px;
-  }
-
-  .advantages__list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .advantages__item {
-    @include font(14, 18, normal);
-
-    width: 195px;
-    margin-left: 80px;
-    margin-bottom: 30px;
-
-    &::before {
-      top: 0;
-      left: -80px;
-
-      width: 60px;
-      height: 60px;
-    }
-  }
+.advantages__item--changes br {
+  display: none;
 }
 
 @media (min-width: 768px) {
+  .advantages {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .advantages__heading {
-    @include font(60, 60, normal);
+    font-size: 60px;
 
     margin-bottom: 63px;
   }
@@ -90,24 +81,33 @@
   }
 
   .advantages__item {
-    @include font(16, 24, normal);
+    @include font-prop(16, 24);
 
-    width: 305px;
-    margin-bottom: 87px;
-    padding: 113px 60px 44px 0;
+    width: 46%;
+    margin-bottom: 80px;
+    margin-left: 0;
+    padding: 121px 80px 44px 0;
 
     &::before {
-      top: 0;
+      top: 9px;
       left: 0;
-
       width: 80px;
       height: 80px;
     }
+  }
+
+  .advantages__item--changes br {
+    display: inline;
   }
 }
 
 @media (min-width: 1220px) {
   .advantages {
     padding-bottom: 130px;
+  }
+
+  .advantages__item {
+    width: 245px;
+    padding-right: 0;
   }
 }
