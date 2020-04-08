@@ -1,13 +1,24 @@
+.products .wrap {
+  text-align: center;
+}
+
 .products__list {
   list-style: none;
 
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 0;
   padding: 0;
 }
 
 .products__item {
+  border-bottom: 1px solid $border-color;
+
   display: flex;
   flex-wrap: wrap;
+  width: 320px;
+  padding: 0 20px 23px;
 
   &--more {
     display: block;
@@ -18,6 +29,10 @@
       content: "";
       position: absolute;
       left: 50%;
+      top: 26px;
+      width: 30px;
+      height: 30px;
+      margin-left: -15px;
 
       background: url("../img/icon-plus-mobile.svg") no-repeat;
       opacity: 0.2;
@@ -25,16 +40,48 @@
   }
 }
 
-.products__item-heading {
-  @include font-oswald;
-  color: #000000;
+.products__item-wrap {
+  width: 140px;
+}
 
-  margin: 0;
+.products__item-heading {
+  @include font-prop(16, 20);
+  @include font-oswald;
+  text-transform: uppercase;
+  color: $black;
+
+  width: 75px;
+  margin: 21px 0 12px;
+}
+
+.products__img {
+  &--mobile {
+    display: block;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
 }
 
 .products__table {
-  font-family: "Arial", sans-serif;
-  color: $grey;
+  @include font-prop(12, 16);
+  @include font-arial;
+  color: $font-color;
+
+  width: 140px;
+  margin-bottom: 21px;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.products__table-cell {
+  width: 70px;
+  padding: 0;
 }
 
 .products__table-cell:nth-child(2) {
@@ -43,150 +90,45 @@
 
 .products__btn {
   @include font-oswald;
-  @include font(16, 20, normal);
+  @include font-prop(15, 20);
 
-  padding-top: 14px;
+  padding-top: 9px;
   padding-bottom: 12px;
 }
 
 .products__more-title {
+  @include font-prop(15, 20);
   @include font-oswald;
   text-transform: uppercase;
 
   text-align: center;
-
   margin: 0;
+  margin-bottom: 10px;
+  padding-top: 78px;
 }
 
 .products__more-subtitile {
-  font-family: "Arial", sans-serif;
+  @include font-prop(12, 16);
+  @include font-arial;
 
   text-align: center;
-
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .products__more-button {
   @include font-oswald;
-  @include font(16, 20, normal);
+  @include font-prop(15, 20);
   text-transform: uppercase;
-  color: #444444;
-
-  display: block;
+  color: $font-color;
+  background-color: $bg-color;
 
   text-align: center;
-  background-color: #f2f2f2;
-
+  display: block;
+  width: 280px;
   margin: 0 auto;
-  padding: 13px 0;
-}
-
-@media (max-width: 767px) {
-  .products__item {
-    border-bottom: 1px solid #ededed;
-    max-width: 311px;
-
-    padding-bottom: 24px;
-
-    &--more::after {
-      top: 26px;
-
-      width: 30px;
-      height: 30px;
-      margin-left: -15px;
-    }
-  }
-
-  .products__item-wrap {
-    width: 140px;
-  }
-
-  .products__item-heading {
-    @include font(16, 20, normal);
-
-    width: 75px;
-    margin-top: 22px;
-    margin-bottom: 17px;
-  }
-
-  .products__img {
-    &--mobile {
-      display: block;
-    }
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: none;
-    }
-  }
-
-  .products__table {
-    @include font(12, 16, normal);
-
-    width: 140px;
-    margin-bottom: 21px;
-  }
-
-  .products__more-title {
-    @include font(16, 20, normal);
-
-    margin-bottom: 10px;
-    padding-top: 80px;
-  }
-
-  .products__more-subtitile {
-    @include font(12, 16, normal);
-
-    margin-bottom: 21px;
-  }
-
-  .products__more-button {
-    width: 280px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1219px) {
-  .products__item {
-    width: 324px;
-    margin-top: 140px;
-  }
-
-  .products__img {
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
-
-    &--desktop {
-      display: none;
-    }
-
-    &--tablet-small {
-      margin-top: -46px;
-    }
-
-    &--tablet-big {
-      margin-top: -81px;
-    }
-  }
-
-  .products__table {
-    width: 250px;
-  }
-
-  .products__btn {
-    width: 250px;
-  }
-
-  .products__more-button {
-    width: 250px;
-  }
+  padding-top: 9px;
+  padding-bottom: 11px;
 }
 
 @media (min-width: 768px) {
@@ -197,59 +139,97 @@
   }
 
   .products__item {
-    background-color: #f2f2f2;
-    position: relative;
+    background-color: $bg-color;
 
+    position: relative;
     flex-direction: column;
     align-items: center;
-
+    width: 324px;
+    margin-top: 139px;
     padding-bottom: 40px;
+    padding-top: 163px;
 
     &--more {
-      background-color: #ffffff;
-      border: 1px solid #e6e6e6;
+      background-color: $white;
+      border: 1px solid $border-color;
 
-      padding-top: 165px;
+      padding-top: 85px;
     }
+  }
+
+  .products__img-link {
+    position: absolute;
+    bottom: 303px;
+    width: 324px;
+    height: 208px;
   }
 
   .products__img {
-    margin-bottom: 51px;
+    position: absolute;
+    bottom: 0;
 
-    &--tablet-small {
-      margin-top: -46px;
+    &--mobile {
+      display: none;
     }
 
-    &--tablet-big {
-      margin-top: -81px;
+    &--tablet {
+      display: block;
     }
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  .products__item-wrap {
+    width: auto;
   }
 
   .products__item-heading {
-    @include font(20, 20, normal);
+    font-size: 20px;
     text-align: center;
 
-    width: 125px;
-    margin: 0 auto 29px;
+    width: 130px;
+    margin: 0 auto 19px;
   }
 
   .products__table {
-    @include font(16, 16, normal);
+    font-size: 16px;
 
-    margin-bottom: 33px;
+    width: 250px;
+    margin-bottom: 32px;
+  }
+
+  .products__table-row {
+    height: 32px;
+    border-bottom: 1px solid $table-border;
+  }
+
+  .products__table-cell:first-child {
+    text-align: left;
+  }
+
+  .products__btn {
+    width: 250px;
+    padding-bottom: 11px;
   }
 
   .products__more-title {
-    @include font(20, 20, normal);
+    font-size: 19px;
 
     width: 140px;
     margin: 0 auto 28px;
   }
 
   .products__more-subtitile {
-    @include font(16, 16, normal) ;
+    font-size: 16px;
     width: 170px;
-    margin: 0 auto 85px;
+    margin: 0 auto 88px;
+  }
+
+  .products__more-button {
+    width: 250px;
+    padding-top: 9px;
   }
 }
 
@@ -259,10 +239,12 @@
     margin-top: 140px;
   }
 
+  .products__img-link {
+    width: 245px;
+  }
+
   .products__img {
-    &--mobile {
-      display: none;
-    }
+    position: absolute;
 
     &--tablet {
       display: none;
@@ -271,6 +253,10 @@
     &--desktop {
       display: block;
     }
+  }
+
+  .products__table {
+    width: 168px;
   }
 
   .products__more-button,

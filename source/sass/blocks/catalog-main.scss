@@ -1,27 +1,17 @@
 .catalog-main__heading {
   @include font-oswald;
+  @include font-prop(36, 60);
+  border-bottom: 1px solid $border-color;
 
+  padding: 14px 20px 28px;
   margin: 0;
-}
-
-@media (max-width: 767px) {
-  .catalog-main__heading {
-    @include font(36, 60, normal);
-    text-align: center;
-
-    border-bottom: 1px solid #ededed;
-
-    padding-top: 19px;
-    padding-bottom: 23px;
-  }
 }
 
 @media (min-width: 768px) {
   .catalog-main__heading {
-    @include font(60, 60, normal);
+    font-size: 60px;
+    border-bottom: none;
 
-    padding-top: 66px;
-    padding-left: 30px;
-    margin-bottom: 25px;
+    padding: 45px 0 25px;
   }
 }
