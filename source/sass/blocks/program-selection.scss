@@ -1,16 +1,26 @@
 .program-selection {
   @include font-oswald;
+
+  padding-top: 15px;
+  padding-bottom: 33px;
 }
 
 .program-selection__heading {
+  @include font-prop(36, 60);
+
   margin: 0;
+  margin-bottom: 25px;
+  padding: 0 20px;
 }
 
 .program-selection__title {
-  color: #111111;
+  @include font-prop(14, 18);
+  color: $font-darken-color;
   text-transform: uppercase;
 
   margin: 0;
+  margin-bottom: 39px;
+  padding: 0 20px;
 }
 
 .program-selection__characteristics-fieldset,
@@ -33,39 +43,69 @@
   padding: 0;
 }
 
+.program-selection__characteristics-fieldset {
+  border-bottom: 1px solid $border-color;
+
+  padding-bottom: 9px;
+}
+
+.program-selection__characteristics-list {
+  padding: 0 20px;
+}
+
 .program-selection__characteristics-item {
   display: flex;
   align-items: center;
+  margin-bottom: 15px;
 }
 
 .program-selection__characteristics-label {
-  color: #222222;
-
+  @include font-prop(16, 18);
+  color: $label-color;
   text-transform: uppercase;
+
+  margin-right: 11px;
 }
 
-.program-selection__characteristics-input {
+.program-selection__characteristics-input,
+.program-selection__contacts-input {
+  @include font-prop(15, 18);
+  @include font-oswald;
   color: $grey;
   text-transform: uppercase;
+  border: 1px solid $border-color;
 
-
-  border: 1px solid #e6e6e6;
-
+  width: 100%;
   margin: 0;
-  padding: 15px;
+  padding: 12px 15px;
+}
+
+.program-selection__select-fieldset {
+  border-bottom: 1px solid $border-color;
+
+  padding-top: 24px;
+  padding-bottom: 7px;
 }
 
 .program-selection__select-item {
   position: relative;
+  margin-bottom: 18px;
 }
 
 .program-selection__select-label {
+  @include font-prop(15, 18);
   text-transform: uppercase;
-  color: #222222;
+  color: $label-color;
+
+  margin-left: 66px;
 }
 
 .program-selection__select-input {
   position: absolute;
+  left: 15px;
+  top: -6px;
+  width: 30px;
+  height: 30px;
 }
 
 .program-selection__contacts-fieldset,
@@ -73,18 +113,25 @@
   overflow: hidden;
 }
 
+.program-selection__contacts-fieldset {
+  padding: 0 20px;
+  margin-top: 28px;
+  margin-bottom: 17px;
+}
+
 .program-selection__contacts-legend {
+  @include font-prop(24, 24);
+
   width: 100%;
   margin: 0;
+  margin-bottom: 33px;
   padding: 0;
 
   &::after {
     content: "";
-
     display: inline-block;
     vertical-align: middle;
-
-    background: #6cbd83;
+    background-color: $main-color;
 
     width: 100%;
     height: 3px;
@@ -95,40 +142,62 @@
 }
 
 .program-selection__contacts-item {
+  position: relative;
   display: flex;
   align-items: center;
+  margin-bottom: 14px;
 }
 
 .program-selection__contacts-label {
+  @include font-prop(15, 18);
   text-transform: uppercase;
-  color: #222222;
-
+  color: $label-color;
   white-space: nowrap;
+
+  margin-right: 11px;
 }
 
 .program-selection__contacts-input {
-  text-transform: uppercase;
-  color: $grey;
+  padding-right: 40px;
+}
 
-  border: 1px solid #e6e6e6;
+.program-selection__contacts-svg {
+  position: absolute;
+  right: 14px;
 
-  width: 100%;
-  padding: 15px;
+  &--mail {
+    width: 17px;
+    height: 13px;
+  }
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.program-selection__contacts-svg path {
+  fill: $label-color;
+}
+
+.program-selection__comment-fieldset {
+  padding: 0 20px;
+  margin-bottom: 31px;
 }
 
 .program-selection__comment-legend {
+  @include font-prop(24, 24);
   width: 100%;
   margin: 0;
+  margin-bottom: 31px;
   padding: 0;
 
 
   &::after {
     content: "";
-
     display: inline-block;
     vertical-align: middle;
-
-    background: #6cbd83;
+    background-color: $main-color;
 
     width: 100%;
     height: 3px;
@@ -138,13 +207,13 @@
 }
 
 .program-selection__comment-text {
+  @include font-prop(15, 18);
+  @include font-oswald;
   text-transform: uppercase;
-  color: $grey;
+  color: $font-color;
+  border: 1px solid $border-color;
 
   width: 100%;
-
-  border: 1px solid #e6e6e6;
-
   margin: 0;
   padding: 15px;
 }
@@ -153,22 +222,23 @@
   border: none;
 
   overflow: hidden;
-
   margin: 0;
+  padding: 0 20px;
 }
 
 .program-selection__additional-legend {
+  @include font-prop(24, 24);
+
   width: 100%;
   margin: 0;
+  margin-bottom: 41px;
   padding: 0;
 
   &::after {
     content: "";
-
     display: inline-block;
     vertical-align: middle;
-
-    background: #6cbd83;
+    background-color: $main-color;
 
     width: 100%;
     height: 3px;
@@ -178,182 +248,46 @@
 }
 
 .program-selection__additional-list {
+  @include font-prop(16, 18);
   text-transform: uppercase;
+
+  padding-bottom: 15px;
 }
 
 .program-selection__additional-item {
   position: relative;
+  margin-bottom: 28px;
 }
 
 .program-selection__additional-label {
-  color: #222222;
+  color: $label-color;
+
+  margin-left: 46px;
 }
 
 .program-selection__additional-input {
   position: absolute;
   top: 50%;
+  width: 30px;
+  height: 30px;
+  margin-top: -15px;
 }
 
 .program-selection__button {
   border: none;
 
-  margin: 0 auto;
+  margin: 0 auto 23px;
+  padding: 13px 0;
 }
 
 .program-selection__required {
-  font-family: "Arial", sans-serif;
-  color: $grey;
+  @include font-prop(14, 16);
+  @include font-arial;
+  color: $font-color;
   text-align: center;
 
   margin: 0;
   padding: 0;
-}
-
-@media (max-width: 767px) {
-  .program-selection {
-    padding-top: 19px;
-    padding-bottom: 33px;
-  }
-
-  .program-selection__heading {
-    @include font(36, 60, normal);
-
-    margin-bottom: 21px;
-    padding: 0 20px;
-  }
-
-  .program-selection__title {
-    @include font(14, 18, normal);
-
-    margin-bottom: 38px;
-    padding: 0 20px;
-  }
-
-  .program-selection__characteristics-fieldset {
-    border-bottom: 1px solid #e6e6e6;
-
-    padding-bottom: 9px;
-  }
-
-  .program-selection__characteristics-list {
-    padding: 0 20px;
-  }
-
-  .program-selection__characteristics-item {
-    margin-bottom: 14px;
-  }
-
-  .program-selection__characteristics-label {
-    @include font(16, 18, normal);
-
-    margin-right: 15px;
-  }
-
-  .program-selection__characteristics-input {
-    @include font(16, 18, normal);
-
-    width: 100%;
-  }
-
-  .program-selection__select-fieldset {
-    border-bottom: 1px solid #e6e6e6;
-
-    padding-top: 27px;
-  }
-
-  .program-selection__select-item {
-    margin-bottom: 24px;
-  }
-
-  .program-selection__select-label {
-    @include font(16, 18, normal);
-    margin-left: 66px;
-  }
-
-  .program-selection__select-input {
-    left: 20px;
-    top: -6px;
-
-    width: 30px;
-    height: 30px;
-  }
-
-  .program-selection__contacts-fieldset {
-    padding: 0 20px;
-    margin-top: 31px;
-    margin-bottom: 17px;
-  }
-
-  .program-selection__contacts-legend {
-    @include font(24, 24, normal);
-
-    margin-bottom: 30px;
-  }
-
-  .program-selection__contacts-item {
-    margin-bottom: 14px;
-  }
-
-  .program-selection__contacts-label {
-    @include font(16, 18, normal);
-
-    margin-right: 12px;
-  }
-
-  .program-selection__contacts-input {
-    @include font(16, 18, normal);
-  }
-
-  .program-selection__comment-fieldset {
-    padding: 0 20px;
-    margin-bottom: 31px;
-  }
-
-  .program-selection__comment-legend {
-    @include font(24, 24, normal);
-    margin-bottom: 31px;
-  }
-
-  .program-selection__comment-text {
-    @include font(15, 18, normal);
-  }
-
-  .program-selection__additional-fieldet {
-    padding: 0 20px;
-  }
-
-  .program-selection__additional-legend {
-    @include font(24, 24, normal);
-    margin-bottom: 41px;
-  }
-
-  .program-selection__additional-list {
-    @include font (16, 18, normal);
-    padding-bottom: 15px;
-  }
-
-  .program-selection__additional-item {
-    margin-bottom: 28px;
-  }
-
-  .program-selection__additional-label {
-    margin-left: 46px;
-  }
-
-  .program-selection__additional-input {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-  }
-
-  .program-selection__button {
-    margin-bottom: 23px;
-    padding: 13px 0;
-  }
-
-  .program-selection__required {
-    @include font(14, 16, normal);
-  }
 }
 
 @media (min-width: 768px) and (max-width: 1219px) {
