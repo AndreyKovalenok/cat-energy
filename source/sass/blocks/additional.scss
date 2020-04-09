@@ -1,10 +1,16 @@
+.additional {
+  padding: 29px 20px 35px;
+}
+
 .additional__heading {
   @include font-oswald;
+  @include font-prop(24, 24);
+  border-bottom: 1px solid $table-border;
 
   position: relative;
-
   width: 100%;
   margin: 0;
+  padding-bottom: 34px;
 
 
   // &::after {
@@ -27,174 +33,111 @@
   list-style: none;
 
   margin: 0;
+  margin-bottom: 39px;
   padding: 0;
 }
 
+.additional__item {
+  border-bottom: 1px solid $table-border;
+
+  padding-top: 12px;
+  padding-bottom: 17px;
+}
+
 .additional__item-heading {
+  @include font-prop(16, 16);
   @include font-oswald;
+  text-transform: uppercase;
 
   margin: 0;
+  margin-bottom: 15px;
   padding: 0;
 }
 
 .additional__info {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 14px;
 }
 
 .additional__count,
 .additional__price {
-  font-family: "Arial", sans-serif;
+  @include font-arial;
+  @include font-prop(14, 14);
+}
+
+.additional__btn {
+  @include font-oswald;
+  @include font-prop(15, 20);
+  padding: 10px 0;
 }
 
 .addition__action {
-  @include font(16, 20, normal);
-  font-family: "Arial", sans-serif;
-  color: #ffffff;
+  @include font-prop(16, 20);
+  @include font-arial;
+  color: $white;
+  background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center center;
 
+  text-align: center;
   position: relative;
-
+  width: 280px;
   margin: 0 auto;
+  padding: 188px 59px 41px;
 }
 
 .addition__action-svg {
   position: absolute;
-
   width: 55px;
   height: 60px;
+  left: 50%;
+  top: 50px;
+  margin-left: -27px;
+  margin-top: 15px;
 }
 
 .addition__action-svg path {
-  fill: #ffffff;
-}
-
-@media (max-width: 767px) {
-  .additional {
-    padding-top: 31px;
-    padding-bottom: 35px;
-  }
-
-  .additional__heading {
-    @include font(24, 24, normal);
-
-    border-bottom: 1px solid #cdcdcd;
-
-    padding-bottom: 31px;
-  }
-
-  .additional__list {
-    margin-bottom: 39px;
-  }
-
-  .additional__item {
-    border-bottom: 1px solid #cdcdcd;
-
-    padding-top: 14px;
-    padding-bottom: 17px;
-  }
-
-  .additional__item-heading {
-    @include font(16, 16, normal);
-
-    margin-bottom: 16px;
-  }
-
-  .additional__info {
-    margin-bottom: 14px;
-  }
-
-  .additional__count,
-  .additional__price {
-    @include font(14, 14, normal);
-  }
-
-  .additional__btn {
-    padding: 13px 0;
-  }
-
-  .addition__action {
-    background: url("../img/gift-photo-mobile@1x.jpg") no-repeat center center;
-    text-align: center;
-
-    width: 280px;
-    padding: 188px 62px 42px;
-  }
-
-  .addition__action-svg {
-    left: 50%;
-    top: 50px;
-
-    margin-left: -27px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1219px) {
-  .additional {
-    padding-top: 71px;
-  }
-
-  .additional__heading {
-    margin-bottom: 80px;
-  }
-
-  .additional__item {
-    border: 1px solid #e6e6e6;
-
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    width: 708px;
-    padding: 27px 36px;
-    margin: 0 auto;
-  }
-
-  .additional__info {
-    flex-grow: 1;
-  }
-
-  .additional__btn {
-    width: 100%;
-    margin-top: 26px;
-    padding: 15px 0 11px;
-  }
-
-  .additional__list {
-    margin-bottom: 69px;
-  }
-
-  .addition__action {
-    background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center center;
-
-    width: 708px;
-    padding: 75px 140px 70px 423px;
-  }
-
-  .addition__action-svg {
-    left: 90px;
-    top: 50%;
-
-    margin-top: -30px;
-  }
+  fill: $white;
 }
 
 @media (min-width: 768px) {
+  .additional {
+    padding: 0;
+    padding-top: 66px;
+    padding-bottom: 75px;
+  }
+
   .additional__heading {
-    @include font(36, 36, normal);
+    @include font-prop(36, 36);
+    border-bottom: none;
+
+    margin-bottom: 46px;
+    margin-left: 37px;
+  }
+
+  .additional__list {
+    margin-bottom: 67px;
   }
 
   .additional__item {
+    border: 1px solid $border-color;
+
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 708px;
+    padding: 25px 38px 25px 36px;
+    margin: 0 auto;
   }
 
   .additional__item-heading {
-    @include font(20, 20, normal);
+    @include font-prop(20, 20);
 
     width: 325px;
   }
 
   .additional__count,
   .additional__price {
-    @include font(16, 20, normal);
+    @include font-prop(16, 20);
     text-align: right;
 
     display: block;
@@ -205,18 +148,41 @@
   }
 
   .additional__price {
-    width: 95px;
+    width: 133px;
+  }
+
+  .additional__info {
+    flex-grow: 1;
+    margin-top: 4px;
   }
 
   .additional__btn {
-    @include font(16, 20, normal);
+    @include font-prop(15, 20);
+
+    width: 100%;
+    margin-top: 8px;
+    padding: 9px 0 12px;
+  }
+
+  .addition__action {
+    background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center center;
+    text-align: left;
+
+    width: 708px;
+    padding: 75px 139px 70px 423px;
+  }
+
+  .addition__action-svg {
+    left: 118px;
+    top: 50%;
+    margin-top: -35px;
   }
 }
 
 @media (min-width: 1220px) {
   .additional {
     padding-top: 79px;
-    padding-bottom: 86px;
+    padding-bottom: 82px;
   }
 
   .additional .wrap {
@@ -225,24 +191,35 @@
   }
 
   .additional__heading {
-    margin-bottom: 76px;
-
+    margin: 0;
+    margin-bottom: 43px;
     flex-grow: 1;
   }
 
   .additional__list {
     width: 895px;
     margin-right: 80px;
+    margin-bottom: 0;
   }
 
   .additional__item {
     justify-content: space-between;
     align-items: center;
+    width: auto;
+    padding: 14px 0;
 
-    border-top: 1px solid #e6e6e6;
-    border-bottom: 1px solid #e6e6e6;
+    border: none;
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+  }
 
-    padding: 15px 0;
+  .additional__item-heading {
+    margin: 0;
+  }
+
+  .additional__info {
+    margin: 0;
+    padding-top: 8px;
   }
 
   .additional__count {
@@ -269,7 +246,7 @@
     text-align: center;
 
     width: 245px;
-    padding: 189px 43px 44px;
+    padding: 189px 42px 44px;
     margin: 0;
   }
 
@@ -278,5 +255,6 @@
     top: 50px;
 
     margin-left: -27px;
+    margin-top: 16px;
   }
 }

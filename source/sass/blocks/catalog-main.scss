@@ -12,6 +12,12 @@
     font-size: 60px;
     border-bottom: none;
 
-    padding: 45px 0 25px;
+    padding: 27px 0 25px;
+  }
+}
+
+@media (min-width: 1220px) {
+  .catalog-main__heading {
+    padding-top: 44px;
   }
 }
