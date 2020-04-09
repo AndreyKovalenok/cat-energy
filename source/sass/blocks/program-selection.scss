@@ -78,6 +78,21 @@
   width: 100%;
   margin: 0;
   padding: 12px 15px;
+
+  &:hover {
+    border-color: $table-border;
+  }
+
+  &:active,
+  &:focus {
+    outline-width: 2px;
+    outline-color: $font-color;
+  }
+
+  &:invalid {
+    outline-width: 2px;
+    outline-color: $input-err;
+  }
 }
 
 .program-selection__select-fieldset {
@@ -217,6 +232,21 @@
   height: 153px;
   margin: 0;
   padding: 15px;
+
+  &:hover {
+    border-color: $table-border;
+  }
+
+  &:active,
+  &:focus {
+    outline-width: 2px;
+    outline-color: $font-color;
+  }
+
+  &:invalid {
+    outline-width: 2px;
+    outline-color: $input-err;
+  }
 }
 
 .program-selection__additional-fieldet {
@@ -395,6 +425,15 @@
     @include font-prop(20, 20);
     padding-top: 11px;
     padding-left: 19px;
+  }
+
+  .program-selection__contacts-input:active + .program-selection__contacts-svg path,
+  .program-selection__contacts-input:focus + .program-selection__contacts-svg path {
+    fill: $main-color;
+  }
+
+  .program-selection__contacts-input:focus:invalid + .program-selection__contacts-svg path {
+    fill: $input-err;
   }
 
   .program-selection__contacts-svg {

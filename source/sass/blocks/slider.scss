@@ -1,12 +1,14 @@
 .slider__list {
   list-style: none;
 
-  margin: 0 auto;
+  height: 210px;
+  margin: 0 auto 63px;
   padding: 0;
 }
 
 .slider__item {
   display: none;
+  height: 210px;
 
   &--active {
     display: block;
@@ -15,21 +17,32 @@
 
 .slider__img {
   margin: 0 auto;
+
+  &--mobile {
+    display: block;
+  }
+
+  &--tablet {
+    display: none;
+  }
+
+  &--desktop {
+    display: none;
+  }
 }
 
 .slider__switch-wrap {
   display: flex;
   justify-content: space-between;
-
   position: relative;
-
+  width: 197px;
   margin: 0 auto;
 }
 
 .slider__button {
   @include font-oswald;
+  @include font-prop(16, 20);
   text-transform: uppercase;
-
   border: none;
   background: none;
 
@@ -38,36 +51,6 @@
 }
 
 @media (max-width: 767px) {
-  .slider__list {
-    height: 210px;
-    margin-bottom: 35px;
-  }
-
-  .slider__item {
-    height: 210px;
-  }
-
-  .slider__img {
-    &--mobile {
-      display: block;
-    }
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: none;
-    }
-  }
-
-  .slider__switch-wrap {
-    width: 197px;
-  }
-
-  .slider__button {
-    @include font(16, 20, normal);
-  }
 
   .slider__switch {
     display: block;
@@ -76,9 +59,9 @@
     left: 50%;
     top: 50%;
 
-    border: 1px solid #cdcdcd;
+    border: 1px solid $table-border;
     border-radius: 7px;
-    background-color: #ffffff;
+    background-color: $white;
 
     width: 82px;
     height: 12px;
@@ -101,20 +84,29 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1219px) {
+@media (min-width: 768px) {
   .slider {
     margin: 0 -30px;
-    padding-top: 1px;
-    padding-bottom: 68px;
+    padding-top: 94px;
+    padding-bottom: 67px;
+    text-align: center;
+
+    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
   }
 
   .slider__list {
     text-align: center;
+    position: relative;
+    width: 690px;
+  }
+
+  .slider__item {
+    position: absolute;
+    top: -263px;
+    right: -7px;
   }
 
   .slider__img {
-    margin-top: -150px;
-
     &--mobile {
       display: none;
     }
@@ -127,17 +119,11 @@
       display: block;
     }
   }
-}
-
-@media (min-width: 768px) {
-  .slider {
-    background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%);
-  }
 
   .slider__switch-wrap {
     position: relative;
 
-    width: 570px;
+    width: 573px;
 
     &::after {
       content: "";
@@ -150,8 +136,8 @@
       border-radius: 3px;
       width: 428px;
       height: 6px;
-      margin-left: -219px;
-      margin-top: -3px;
+      margin-left: -216px;
+      margin-top: -6px;
     }
   }
 
@@ -165,19 +151,14 @@
 
 @media (min-width: 1220px) {
   .slider {
-    display: flex;
-
-    width: 610px;
-    padding-top: 1px;
     padding-bottom: 68px;
-
-    position: relative;
   }
+
 
   .slider__item {
     position: absolute;
-
-    top: -130px;
+    top: -284px;
+    right: -10px;
   }
 
   .slider__img {
@@ -195,6 +176,7 @@
   }
 
   .slider__switch-wrap {
-    margin-top: auto;
+    margin: 0;
+    margin-left: 89px;
   }
 }

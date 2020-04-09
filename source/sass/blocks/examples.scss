@@ -1,152 +1,119 @@
+.examples {
+  background-color: $bg-color;
+
+  padding-top: 18px;
+  padding-bottom: 35px;
+}
+
+.examples__info {
+  padding: 0 20px;
+}
+
 .examples__heading {
   @include font-oswald;
+  @include font-prop(36, 60);
 
   margin: 0;
+  margin-bottom: 22px;
+  padding: 0 20px;
 }
 
 .examples__description {
-  font-family: "Arial", sans-serif;
+  @include font-arial;
+  @include font-prop(14, 18);
   color: $grey;
 
-  margin: 0;
+  width: 270px;
+  margin: 0 auto 27px;
+}
+
+.examples__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .examples__item {
-  display: inline-block;
-  vertical-align: middle;
   text-align: center;
-
   position: relative;
+  width: 123px;
+  margin-bottom: 33px;
 
-  border: 1px solid #cdcdcd;
+  border: 1px solid $table-border;
   border-radius: 3px;
+}
+
+.examples__item:first-of-type {
+  margin-right: 32px;
 }
 
 .expamples__count {
   @include font-oswald;
+  @include font-prop(24, 24);
   text-transform: uppercase;
 
+  padding-top: 12px;
+  padding-bottom: 18px;
   display: block;
 }
 
 .exmaples__subtitle {
-  font-family: "Arial", sans-serif;
-  color: $grey;
+  @include font-arial;
+  @include font-prop(12, 12);
+  color: $font-color;
+  background-color: $bg-color;
 
   display: block;
   text-align: center;
-
   position: absolute;
-  top: 50px;
+  top: 45px;
   left: 50%;
+  width: 82px;
+  margin-left: -41px;
 }
 
 .examples__expenses {
   @include font-oswald;
+  @include font-prop(13, 20);
   text-transform: uppercase;
 
   text-align: center;
-
-  margin: 0;
-}
-
-
-@media (max-width: 767px) {
-  .examples {
-    background-color: #f2f2f2;
-
-    padding-top: 21px;
-    padding-bottom: 35px;
-  }
-
-  .examples__info {
-    padding: 0 20px;
-  }
-
-  .examples__heading {
-    @include font(36, 60, normal);
-
-    margin-bottom: 22px;
-    padding: 0 20px;
-  }
-
-  .examples__description {
-    @include font(14, 18, normal);
-
-    width: 270px;
-    margin-bottom: 27px;
-  }
-
-  .examples__item {
-    width: 122px;
-    margin-bottom: 35px;
-  }
-
-  .examples__item:first-of-type {
-    margin-right: 29px;
-  }
-
-  .expamples__count {
-    @include font(24, 24, normal);
-
-    padding-top: 16px;
-    padding-bottom: 18px;
-  }
-
-  .exmaples__subtitle {
-    @include font(12, 12, normal);
-
-    background-color: #f2f2f2;
-
-    width: 82px;
-    margin-left: -41px;
-  }
-
-  .examples__expenses {
-    @include font(14, 20, normal);
-
-    margin-bottom: 44px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1219px) {
-  .examples {
-    padding-top: 51px;
-  }
-
-  .examples__info {
-    padding-bottom: 255px;
-  }
-
-  .examples__heading {
-    margin-bottom: 56px;
-  }
-
-  .examples__description {
-    margin-bottom: 52px;
-  }
-
-  .exmaples__subtitle {
-    background-color: #ffffff;
-  }
-
-  .examples__expenses {
-    display: inline-block;
-    vertical-align: middle;
-    text-align: right;
-
-    width: 192px;
-    margin-left: 138px;
-  }
+  margin: 0 10px 33px;
 }
 
 @media (min-width: 768px) {
+  .examples {
+    padding-top: 2px;
+    padding-bottom: 0;
+    background-color: $white;
+  }
+
+  .examples__info {
+    padding: 0;
+    padding-bottom: 221px;
+  }
+
   .examples__heading {
-    @include font(60, 60, normal);
+    font-size: 60px;
+
+    margin-bottom: 64px;
+    padding: 0;
   }
 
   .examples__description {
-    @include font(16, 24, normal);
+    @include font-prop(16, 24);
+
+    width: 700px;
+    margin: 0 auto 53px;
+  }
+
+  .examples__list {
+    align-items: center;
+  }
+
+  .examples__item {
+    width: 162px;
   }
 
   .examples__item:first-of-type {
@@ -154,16 +121,17 @@
   }
 
   .expamples__count {
-    @include font(30, 37, normal);
+    @include font-prop(30, 37);
 
-    padding: 18px 0 20px;
+    padding: 14px 0 20px;
     width: 162px;
   }
 
   .exmaples__subtitle {
-    @include font(14, 14, normal);
+    @include font-prop(14, 14);
+    background-color: $white;
 
-    padding-top: 17px;
+    top: 63px;
 
     &--weight {
       width: 114px;
@@ -177,7 +145,14 @@
   }
 
   .examples__expenses {
-    @include font(20, 20, normal);
+    font-size: 19px;
+
+    display: inline-block;
+    vertical-align: middle;
+    text-align: right;
+
+    width: 192px;
+    margin-left: 149px;
   }
 }
 
@@ -186,18 +161,18 @@
     background: linear-gradient(to right, #f2f2f2 80%, #eaeaea 80%);
 
     position: relative;
-
-    padding-top: 1px;
   }
 
   .examples .wrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
   }
 
   .examples__info {
-    padding: 76px 0;
-    width: 610px;
+    padding-top: 71px;
+    padding-bottom: 0;
+    width: 530px;
   }
 
   .examples__heading {
@@ -205,22 +180,32 @@
 
     position: absolute;
 
-    top: -120px;
+    top: -136px;
   }
 
   .examples__description {
     width: 435px;
-    margin-bottom: 71px;
+    margin: 0;
+    margin-bottom: 67px;
+  }
+
+  .examples__list {
+    justify-content: flex-start;
+  }
+
+  .exmaples__subtitle {
+    background-color: $bg-color;
   }
 
   .examples__expenses {
-    margin-top: 60px;
-    width: 325px;
+    margin-left: 0;
+    margin-top: 25px;
+    width: 330px;
 
     text-align: left;
   }
 
   .examples__expenses-count {
-    margin-left: 41px;
+    margin-left: 59px;
   }
 }
