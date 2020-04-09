@@ -129,6 +129,15 @@
   margin: 0 auto;
   padding-top: 9px;
   padding-bottom: 11px;
+
+  &:hover,
+  &:active {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    color: rgba($color: $font-color, $alpha: 0.3);
+  }
 }
 
 @media (min-width: 768px) {

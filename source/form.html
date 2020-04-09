@@ -72,7 +72,7 @@
               <legend class="visually-hidden">Выбор программы</legend>
               <ul class="program-selection__select-list">
                 <li class="program-selection__select-item">
-                  <input type="radio" class="program-selection__select-input" name="target" value="Похудение" id ="losing">
+                  <input type="radio" class="program-selection__select-input" name="target" value="Похудение" id ="losing" checked>
                   <label for="losing" class="program-selection__select-label">Похудение</label>
                 </li>
                 <li class="program-selection__select-item">
@@ -92,10 +92,12 @@
                 <li class="program-selection__contacts-item">
                   <label for="email" class="program-selection__contacts-label">E-mail:*</label>
                   <input type="email" class="program-selection__contacts-input" id="email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="program-selection__contacts-svg program-selection__contacts-svg--mail" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 17 13"><path d="M15.6 11.6H1.4V5.8H0V13h17V5.8h-1.4v5.8zM0 0v2.3l8.5 7.1L17 2.3V0H0zm15.6 1.6L8.5 7.5 1.4 1.6v-.2h14.2v.2z"/></svg>
                 </li>
                 <li class="program-selection__contacts-item">
                   <label for="phone" class="program-selection__contacts-label">Телефон:*</label>
                   <input type="phone" class="program-selection__contacts-input" id="phone" placeholder="8 (960) 900-60-90" required>
+                  <svg class="program-selection__contacts-svg program-selection__contacts-svg--phone" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 20 20"><path d="M17.9 9.4H9.4v1.2h8.5l-2.1 2.1.9.9 3.1-3.1c.2-.2.2-.6 0-.9l-3.1-3.1-.9.9 2.1 2zM8.1 19.4v-6.2c0-.3-.3-.6-.6-.6H3.1c0 .7.6 1.2 1.2 1.2h2.5v5H3.1c-1 .1-1.8-.7-1.9-1.7v-14c0-1 .8-1.8 1.7-1.8H6.8v5H4.4c-.7 0-1.2.6-1.2 1.2h4.4c.3 0 .6-.3.6-.6V.6C8.1.3 7.8 0 7.5 0H3.1C1.5-.1.1 1.2 0 2.9V16.8c-.1 1.7 1.2 3.1 2.9 3.1H7.5c.3.1.6-.2.6-.5z"/></svg>
                 </li>
               </ul>
             </fieldset>
@@ -127,8 +129,10 @@
               </ul>
             </fieldset>
 
-            <button type="submit" class="program-selection__button button">Отправить заявку</button>
-            <p class="program-selection__required">* — Обязательные поля</p>
+            <div class="program-selection__submit">
+              <button type="submit" class="program-selection__button button">Отправить заявку</button>
+              <p class="program-selection__required">* — Обязательные поля</p>
+            </div>
           </form>
         </section>
       </div>
@@ -137,7 +141,7 @@
 
     <footer class="page-footer">
       <div class="page-footer__top-wrap">
-        <div class="page-footer__top page-footer__top--index">
+        <div class="page-footer__top">
           <p class="page-footer__invite">приглашаем <br> к сотрудничеству дилеров!</p>
           <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <br><br> Санкт-Петербург</p>
         </div>
