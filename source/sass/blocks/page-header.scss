@@ -5,9 +5,16 @@
 .page-header__bottom {
   display: flex;
   flex-direction: column;
-  padding-top: 27px;
+  align-items: center;
+  padding: 27px 20px 0;
+  background: url("../img/index-background-mobile@1x.jpg") center top no-repeat, linear-gradient(to bottom, #63a73a 305px, $white 305px);
+}
 
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat center top;
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .page-header__bottom {
+    background: url("../img/index-background-mobile@2x.jpg") center top no-repeat, linear-gradient(to bottom, #63a73a 305px, $white 305px);
+    background-size: 320px;
+  }
 }
 
 .page-header__title {
@@ -15,7 +22,7 @@
   color: $white;
 
   text-align: center;
-  width: 320px;
+  width: 280px;
   margin: 0 auto 25px;
 }
 
@@ -31,24 +38,13 @@
 
 .page-header__img {
   display: block;
-  margin: 0 auto;
-
-  &--mobile {
-    display: block;
-  }
-
-  &--tablet {
-    display: none;
-  }
-
-  &--desktop {
-    display: none;
-  }
 }
 
 .page-header__select-program {
   @include font-prop(13, 18);
 
+  width: 100%;
+  margin: 0 20px;
   padding-top: 12px;
   padding-bottom: 11px;
 }
@@ -63,6 +59,7 @@
   }
 
   .page-header__bottom {
+    align-items: flex-start;
     background: none;
   }
 
@@ -99,21 +96,9 @@
     margin-left: 89px;
   }
 
-  .page-header__img {
+  .page-header__picture {
     order: 1;
     margin-top: -80px;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
-
-    &--desktop {
-      display: none;
-    }
   }
 }
 
@@ -123,6 +108,8 @@
 
     &--index {
       padding-bottom: 188px;
+      background: url("../img/index-background-desktop@2x.jpg") right top no-repeat;
+      background-size: 50% auto;
     }
   }
 
@@ -151,21 +138,9 @@
     margin-left: 0;
   }
 
-  .page-header__img {
+  .page-header__picture {
     position: absolute;
     left: 450px;
     top: 78px;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
   }
 }
