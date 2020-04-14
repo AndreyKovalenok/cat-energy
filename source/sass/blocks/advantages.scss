@@ -59,6 +59,30 @@
   }
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .advantages__item {
+    &::before {
+      background-size: 48px 50px;
+    }
+
+    &--healthy::before {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+
+    &--powder::before {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+
+    &--food::before {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+
+    &--changes::before {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
+}
+
 .advantages__item--changes br {
   display: none;
 }
