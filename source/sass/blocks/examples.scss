@@ -29,8 +29,8 @@
 .examples__list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .examples__item {
@@ -81,7 +81,7 @@
   margin: 0 10px 33px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .examples {
     padding-top: 2px;
     padding-bottom: 0;
@@ -103,16 +103,17 @@
   .examples__description {
     @include font-prop(16, 24);
 
-    width: 700px;
-    margin: 0 auto 53px;
+    width: 99%;
+    margin-bottom: 53px;
   }
 
   .examples__list {
     align-items: center;
+    flex-wrap: nowrap;
   }
 
   .examples__item {
-    width: 162px;
+    width: 23%;
   }
 
   .examples__item:first-of-type {
@@ -123,7 +124,6 @@
     @include font-prop(30, 37);
 
     padding: 14px 0 20px;
-    width: 162px;
   }
 
   .exmaples__subtitle {
@@ -144,18 +144,18 @@
   }
 
   .examples__expenses {
-    font-size: 19px;
+    @include font-prop(19, 29);
 
     display: inline-block;
     vertical-align: middle;
     text-align: right;
 
     width: 192px;
-    margin-left: 149px;
+    margin: 0 0 33px 149px;
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: $desktop-width) {
   .examples {
     background: linear-gradient(to right, #f2f2f2 80%, #eaeaea 80%);
 
@@ -190,6 +190,11 @@
 
   .examples__list {
     justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .examples__item {
+    width: 161px;
   }
 
   .exmaples__subtitle {
@@ -198,7 +203,7 @@
 
   .examples__expenses {
     margin-left: 0;
-    margin-top: 25px;
+    margin-top: 20px;
     width: 330px;
 
     text-align: left;

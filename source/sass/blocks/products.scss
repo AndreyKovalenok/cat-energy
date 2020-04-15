@@ -116,6 +116,7 @@
   text-transform: uppercase;
   color: $font-color;
   background-color: $bg-color;
+  cursor: pointer;
 
   text-align: center;
   display: block;
@@ -134,7 +135,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .products__list {
     display: flex;
     justify-content: space-between;
@@ -235,7 +236,7 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: $desktop-width) {
   .products__item {
     width: 245px;
     margin-top: 140px;
