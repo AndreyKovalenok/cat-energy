@@ -87,7 +87,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .advantages {
     padding-left: 0;
     padding-right: 0;
@@ -125,7 +125,7 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: $desktop-width) {
   .advantages {
     padding-bottom: 138px;
   }

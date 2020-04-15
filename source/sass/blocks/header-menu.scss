@@ -234,12 +234,12 @@
   }
 
   .header-menu__link {
-    color: $white;
-  }
+    &--index {
+      color: $white;
 
-  .header-menu__link--active {
-    &::before {
-      background-color: $white;
+      &::before {
+        background-color: $white;
+      }
     }
   }
 }

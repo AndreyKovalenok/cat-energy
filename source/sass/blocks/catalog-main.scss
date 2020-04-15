@@ -7,7 +7,7 @@
   margin: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: $tablet-width) {
   .catalog-main__heading {
     font-size: 60px;
     border-bottom: none;
@@ -16,7 +16,7 @@
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: $desktop-width) {
   .catalog-main__heading {
     padding-top: 44px;
   }
