@@ -68,7 +68,6 @@
 }
 
 .page-footer__list {
-  font-size: 0;
   list-style: none;
 
   display: flex;
@@ -82,7 +81,10 @@
 
 .page-footer__link {
   display: block;
+  color: $svg-color;
+}
 
+.page-footer__link-svg {
   &--vk {
     width: 22px;
     height: 12px;
@@ -99,13 +101,9 @@
   }
 }
 
-.page-footer__link path {
-  fill: $svg-color;
-}
-
-.page-footer__link:hover path,
-.page-footer__link:active path {
-  fill: $main-color;
+.page-footer__link:hover,
+.page-footer__link:active {
+  color: $main-color;
 }
 
 .page-footer__link:active path {
@@ -137,8 +135,6 @@
 }
 
 .page-footer__academy-svg {
-  font-size: 0;
-
   position: absolute;
   right: -6px;
   top: 50%;
@@ -146,10 +142,8 @@
   width: 40px;
   height: 40px;
   margin-top: -21px;
-}
 
-.page-footer__academy-svg path {
-  fill: $svg-color;
+  color: $svg-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -206,7 +200,7 @@
     padding-right: 26px;
   }
 
-  .page-footer__link {
+  .page-footer__link-svg {
     &--vk {
       width: 30px;
       height: 16px;
