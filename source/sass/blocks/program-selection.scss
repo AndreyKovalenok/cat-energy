@@ -204,6 +204,8 @@
   position: absolute;
   right: 14px;
 
+  fill: $label-color;
+
   &--mail {
     width: 17px;
     height: 13px;
@@ -213,10 +215,6 @@
     width: 20px;
     height: 20px;
   }
-}
-
-.program-selection__contacts-svg {
-  fill: $label-color;
 }
 
 .program-selection__comment-fieldset {
@@ -328,7 +326,7 @@
     height: 30px;
     margin-top: -14px;
 
-    border: 1px solid $border-input
+    border: 1px solid $border-input;
   }
 }
 
