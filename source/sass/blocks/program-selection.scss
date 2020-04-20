@@ -98,13 +98,13 @@
 .program-selection__select-fieldset {
   border-bottom: 1px solid $border-color;
 
-  padding-top: 24px;
+  padding-top: 22px;
   padding-bottom: 7px;
 }
 
 .program-selection__select-item {
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
 }
 
 .program-selection__select-label {
@@ -113,15 +113,35 @@
   color: $label-color;
 
   margin-left: 66px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 20px;
+    top: -3px;
+    width: 31px;
+    height: 31px;
+
+    border-radius: 50%;
+    border: 1px solid $border-input;
+  }
 }
 
 .program-selection__select-input {
   position: absolute;
-  left: 15px;
-  top: -6px;
-  width: 30px;
-  height: 30px;
+  left: 20px;
+  top: -3px;
+  width: 31px;
+  height: 31px;
   margin: 0;
+  appearance: none;
+}
+
+.program-selection__select-input:checked + .program-selection__select-label {
+  &::before {
+    background-color: $main-color;
+    box-shadow: inset 0 0 0 8px $white;
+  }
 }
 
 .program-selection__contacts-fieldset {
@@ -171,9 +191,20 @@
   padding-right: 40px;
 }
 
+.program-selection__contacts-input:active + .program-selection__contacts-svg,
+.program-selection__contacts-input:focus + .program-selection__contacts-svg {
+  fill: $main-color;
+}
+
+.program-selection__contacts-input:focus:invalid + .program-selection__contacts-svg {
+  fill: $input-err;
+}
+
 .program-selection__contacts-svg {
   position: absolute;
   right: 14px;
+
+  fill: $label-color;
 
   &--mail {
     width: 17px;
@@ -184,10 +215,6 @@
     width: 20px;
     height: 20px;
   }
-}
-
-.program-selection__contacts-svg path {
-  fill: $label-color;
 }
 
 .program-selection__comment-fieldset {
@@ -289,6 +316,18 @@
   color: $label-color;
 
   margin-left: 46px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    margin-top: -14px;
+
+    border: 1px solid $border-input;
+  }
 }
 
 .program-selection__additional-input {
@@ -296,7 +335,16 @@
   top: 50%;
   width: 30px;
   height: 30px;
-  margin-top: -15px;
+  margin: 0;
+  margin-top: -14px;
+  appearance: none;
+}
+
+.program-selection__additional-input:checked + .program-selection__additional-label {
+  &::before {
+    background: url("../img/icon-tick.svg") no-repeat center center;
+    background-size: 20px 20px;
+  }
 }
 
 .program-selection__submit {
@@ -394,6 +442,13 @@
   .program-selection__select-label {
     @include font-prop(20, 20);
     margin-left: 0;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      left: -60px;
+      top: -9px;
+    }
   }
 
   .program-selection__contacts-fieldset {
@@ -417,10 +472,16 @@
   }
 
   .program-selection__select-input {
-    left: -65px;
-    top: -11px;
+    left: -60px;
+    top: -9px;
     width: 40px;
     height: 40px;
+  }
+
+  .program-selection__select-input:checked + .program-selection__select-label {
+    &::before {
+      box-shadow: inset 0 0 0 10px #ffffff;
+    }
   }
 
   .program-selection__contacts-list {
@@ -437,15 +498,6 @@
     @include font-prop(20, 20);
     padding-top: 11px;
     padding-left: 19px;
-  }
-
-  .program-selection__contacts-input:active + .program-selection__contacts-svg path,
-  .program-selection__contacts-input:focus + .program-selection__contacts-svg path {
-    fill: $main-color;
-  }
-
-  .program-selection__contacts-input:focus:invalid + .program-selection__contacts-svg path {
-    fill: $input-err;
   }
 
   .program-selection__contacts-svg {
@@ -527,10 +579,16 @@
     @include font-prop(20, 20);
 
     margin-left: 0;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+    }
   }
 
   .program-selection__additional-input {
-    left: -5px;
+    left: 0;
     width: 40px;
     height: 40px;
     margin-top: -20px;
