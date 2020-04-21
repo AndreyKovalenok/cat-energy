@@ -145,6 +145,7 @@
 
   .products__item {
     background-color: $bg-color;
+    border-bottom: none;
 
     position: relative;
     flex-direction: column;

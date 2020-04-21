@@ -77,16 +77,16 @@
     </header>
 
     <main class="form-main">
+      <h1 class="visually-hidden">Форма анкеты</h1>
 
-      <div class="wrap">
-        <h1 class="visually-hidden">Форма анкеты</h1>
-
-        <section class="program-selection">
+      <section class="program-selection">
+        <div class="wrap">
           <h2 class="program-selection__heading">Подбор программы</h2>
-
           <p class="program-selection__title">Заполните анкету и мы подберем программу питания для вашего кота</p>
-          <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="program-selection__characteristics-fieldset">
+        </div>
+
+        <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="program-selection__characteristics-fieldset">
               <legend class="visually-hidden">Характеристики вашего кота</legend>
               <ul class="program-selection__characteristics-list">
                 <li class="program-selection__characteristics-item">
@@ -102,9 +102,9 @@
                   <input type="text" class="program-selection__characteristics-input" id="age" placeholder="7">
                 </li>
               </ul>
-            </fieldset>
+          </fieldset>
 
-            <fieldset class="program-selection__select-fieldset">
+          <fieldset class="program-selection__select-fieldset">
               <legend class="visually-hidden">Выбор программы</legend>
               <ul class="program-selection__select-list">
                 <li class="program-selection__select-item">
@@ -120,10 +120,15 @@
                   <label for="answer" class="program-selection__select-label">Не знаю (Нужен ваш совет)</label>
                 </li>
               </ul>
-            </fieldset>
+          </fieldset>
 
-            <fieldset class="program-selection__contacts-fieldset">
-              <legend class="program-selection__contacts-legend">Контактные данные (владельца кота)</legend>
+          <fieldset class="program-selection__contacts-fieldset">
+            <div class="line-wrap">
+              <div class="program-selection__wrap wrap">
+                <legend class="program-selection__contacts-legend">Контактные данные (владельца кота)</legend>
+              </div>
+            </div>
+            <div class="program-selection__wrap wrap">
               <ul class="program-selection__contacts-list">
                 <li class="program-selection__contacts-item">
                   <label for="email" class="program-selection__contacts-label">E-mail:*</label>
@@ -140,15 +145,27 @@
                   </svg>
                 </li>
               </ul>
-            </fieldset>
+            </div>
+          </fieldset>
 
-            <fieldset class="program-selection__comment-fieldset">
-              <legend class="program-selection__comment-legend">Комментарий</legend>
+          <fieldset class="program-selection__comment-fieldset">
+            <div class="line-wrap">
+              <div class="program-selection__wrap wrap">
+                <legend class="program-selection__comment-legend">Комментарий</legend>
+              </div>
+            </div>
+            <div class="program-selection__wrap wrap">
               <textarea class="program-selection__comment-text" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </fieldset>
+            </div>
+          </fieldset>
 
-            <fieldset class="program-selection__additional-fieldet">
-              <legend class="program-selection__additional-legend">Дополнительно</legend>
+          <fieldset class="program-selection__additional-fieldset">
+            <div class="line-wrap">
+              <div class="program-selection__wrap wrap">
+                <legend class="program-selection__additional-legend">Дополнительно</legend>
+              </div>
+            </div>
+            <div class="program-selection__wrap wrap">
               <ul class="program-selection__additional-list">
                 <li class="program-selection__additional-item">
                   <input type="checkbox" class="program-selection__additional-input" name="additional" value="Сахарозаменитель" id="sweetener" checked>
@@ -167,15 +184,17 @@
                   <label for="vitamins" class="program-selection__additional-label">Витамины</label>
                 </li>
               </ul>
-            </fieldset>
+            </div>
+          </fieldset>
 
+          <div class="wrap">
             <div class="program-selection__submit">
               <button type="submit" class="program-selection__button button">Отправить заявку</button>
               <p class="program-selection__required">* — Обязательные поля</p>
             </div>
-          </form>
-        </section>
-      </div>
+          </div>
+        </form>
+      </section>
 
     </main>
 
@@ -185,22 +204,24 @@
           <p class="page-footer__invite">приглашаем <br> к сотрудничеству дилеров!</p>
           <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></p>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+        <div class="page-footer__map-wrap">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1220px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img
-            class="page-footer__map"
-            src="img/bg-map-mobile@1x.png"
-            srcset="img/bg-map-mobile@2x.png 2x"
-            alt="Карта города с нашим адресом: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-            width="320"
-            height="400"
-          >
-        </picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img
+              class="page-footer__map"
+              src="img/bg-map-mobile@1x.png"
+              srcset="img/bg-map-mobile@2x.png 2x"
+              alt="Карта города с нашим адресом: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+              width="320"
+              height="400"
+            >
+          </picture>
+        </div>
       </div>
 
       <div class="wrap">
@@ -238,7 +259,7 @@
 
           <div class="page-footer__academy">
             <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
-              HTML academy
+              HTML Academy
               <svg class="page-footer__academy-svg">
                 <use xlink:href="#icon-htmlacademy"></use>
               </svg>
