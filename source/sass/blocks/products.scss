@@ -18,7 +18,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding: 0 20px 23px;
+  padding: 0 20px 24px;
 
   &--more {
     display: block;
@@ -43,6 +43,7 @@
 .products__img-link {
   display: block;
   width: 50%;
+  height: 144px;
   text-align: center;
 }
 
@@ -55,9 +56,10 @@
   @include font-oswald;
   text-transform: uppercase;
   color: $black;
+  text-align: left;
 
   width: 75px;
-  margin: 21px 0 12px;
+  margin: 21px 0 13px;
 }
 
 .products__table {
@@ -66,7 +68,6 @@
   color: $font-color;
 
   width: 100%;
-  margin-bottom: 21px;
   border-spacing: 0;
   border-collapse: collapse;
 }
@@ -87,7 +88,7 @@
 
   width: 100%;
   padding-top: 9px;
-  padding-bottom: 12px;
+  padding-bottom: 11px;
 }
 
 .products__more-title {
@@ -150,7 +151,7 @@
     align-items: center;
     width: 46%;
     margin-top: 139px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
     padding-top: 163px;
 
     &--more {
@@ -162,7 +163,8 @@
       &::after {
         width: 60px;
         height: 60px;
-        margin-left: -30px;
+        margin-left: -28px;
+        top: 55px;
       }
     }
   }
@@ -200,7 +202,7 @@
     font-size: 16px;
 
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
   }
 
   .products__table-row {
@@ -225,9 +227,9 @@
   }
 
   .products__more-subtitile {
-    font-size: 16px;
+    @include font-prop(16, 18);
     width: 170px;
-    margin: 0 auto 88px;
+    margin: 0 auto 85px;
   }
 
   .products__more-button {
@@ -238,6 +240,8 @@
 
 @media (min-width: $desktop-width) {
   .products__item {
+    padding-left: 27px;
+    padding-right: 27px;
     width: 245px;
     margin-top: 140px;
   }
@@ -260,6 +264,7 @@
 
   .products__table {
     width: 168px;
+    margin-bottom: 32px;
   }
 
   .products__more-button,

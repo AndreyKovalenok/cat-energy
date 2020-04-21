@@ -21,16 +21,6 @@
   }
 }
 
-.logo-mobile .st0,
-.logo-desktop .st0 {
-  fill: #fcc305;
-}
-
-.logo-tablet,
-.logo-desktop {
-  display: none;
-}
-
 .header-menu__toggle {
   font-size: 0;
   border: none;
@@ -148,14 +138,6 @@
     height: 57px;
   }
 
-  .logo-mobile {
-    display: none;
-  }
-
-  .logo-tablet {
-    display: inline;
-  }
-
   .header-menu__toggle {
     display: none;
   }
@@ -208,14 +190,6 @@
   .header-menu__logo-svg {
     width: 202px;
     height: 60px;
-  }
-
-  .logo-tablet {
-    display: none;
-  }
-
-  .logo-desktop {
-    display: inline;
   }
 
   .header-menu__list {
