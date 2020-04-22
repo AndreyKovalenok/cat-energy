@@ -2,7 +2,7 @@
   border-bottom: 1px solid $border-color;
 
   position: relative;
-  padding: 11px 20px 17px;
+  padding: 11px 20px 16px;
 }
 
 .header-menu__logo {
@@ -195,6 +195,10 @@
   .header-menu__list {
     font-size: 20px;
     color: $white;
+  }
+
+  .header-menu__item:not(:first-child) {
+    margin-left: 34px;
   }
 
   .header-menu__link {

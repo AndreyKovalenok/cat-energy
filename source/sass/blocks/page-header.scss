@@ -33,7 +33,7 @@
 
   text-align: center;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
 }
 
 .page-header__img {
@@ -45,8 +45,7 @@
 
   width: 100%;
   margin: 0 20px;
-  padding-top: 12px;
-  padding-bottom: 11px;
+  padding: 11px 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -61,6 +60,9 @@
   .page-header__bottom {
     align-items: flex-start;
     background: none;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .page-header__title,
@@ -91,7 +93,7 @@
     position: relative;
     width: 245px;
     padding-top: 14px;
-    padding-bottom: 17px;
+    padding-bottom: 18px;
     margin: 0;
     margin-left: 89px;
   }

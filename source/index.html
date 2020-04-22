@@ -121,15 +121,19 @@
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--healthy">
               Функциональное питание содержит только полезные питательные вещества.
+              <span class="advantages__item-bg">1</span>
             </li>
             <li class="advantages__item advantages__item--powder">
               Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+              <span class="advantages__item-bg">2</span>
             </li>
             <li class="advantages__item advantages__item--food">
               Замените один-два приема обычной еды на наше функциональное питание.
+              <span class="advantages__item-bg">3</span>
             </li>
             <li class="advantages__item advantages__item--changes">
               Уже через месяц наслаждайтесь изменениями к лучшему <br> вашего питомца!
+              <span class="advantages__item-bg">4</span>
             </li>
           </ul>
         </div>
@@ -183,7 +187,8 @@
                   >
                 </picture>
               </li>
-              <li class="slider__item">
+
+              <li class="slider__item slider__item--become">
                 <picture class="slider__picture">
                   <source type="image/webp" media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/after-tablet@1x.webp, img/after-tablet@2x.webp 2x">
@@ -205,7 +210,7 @@
 
             <div class="slider__switch-wrap">
               <button class="slider__button" type="button">Было</button>
-              <span class="slider__switch"></span>
+              <button class="slider__switch" type="button"></button>
               <button class="slider__button" type="button">Стало</button>
             </div>
           </div>
@@ -220,22 +225,24 @@
           <p class="page-footer__invite">приглашаем <br> к сотрудничеству дилеров!</p>
           <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></p>
         </div>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
+        <div class="page-footer__map-wrap">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img
-            class="page-footer__map"
-            src="img/bg-map-mobile@1x.png"
-            srcset="img/bg-map-mobile@2x.png 2x"
-            alt="Карта города с нашим адресом: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
-            width="320"
-            height="400"
-          >
-        </picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png 1x, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img
+              class="page-footer__map"
+              src="img/bg-map-mobile@1x.png"
+              srcset="img/bg-map-mobile@2x.png 2x"
+              alt="Карта города с нашим адресом: ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"
+              width="320"
+              height="400"
+            >
+          </picture>
+        </div>
       </div>
 
       <div class="wrap">
@@ -273,7 +280,7 @@
 
           <div class="page-footer__academy">
             <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
-              HTML academy
+              HTML Academy
               <svg class="page-footer__academy-svg">
                 <use xlink:href="#icon-htmlacademy"></use>
               </svg>
