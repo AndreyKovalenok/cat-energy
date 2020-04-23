@@ -97,10 +97,11 @@
 
 .page-footer__link {
   display: block;
-  color: $svg-color;
 }
 
 .page-footer__link-svg {
+  fill: #666666;
+
   &--vk {
     width: 22px;
     height: 12px;
@@ -117,12 +118,12 @@
   }
 }
 
-.page-footer__link:hover,
-.page-footer__link:active {
-  color: $main-color;
+.page-footer__link:hover .page-footer__link-svg,
+.page-footer__link:active .page-footer__link-svg {
+  fill: $main-color;
 }
 
-.page-footer__link:active path {
+.page-footer__link:active {
   opacity: 0.3;
 }
 
@@ -145,8 +146,8 @@
   }
 }
 
-.page-footer__link-academy:hover path,
-.page-footer__link-academy:active path {
+.page-footer__link-academy:hover .page-footer__academy-svg,
+.page-footer__link-academy:active .page-footer__academy-svg {
   fill: $main-color;
 }
 
@@ -159,7 +160,7 @@
   height: 42px;
   margin-top: -21px;
 
-  color: $svg-color;
+  fill: $svg-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -253,7 +254,7 @@
 
   .page-footer__link-academy {
     padding: 0;
-    margin-right: 23px;
+    padding-right: 23px;
   }
 
   .page-footer__academy-svg {
