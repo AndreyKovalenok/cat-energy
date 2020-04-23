@@ -2,7 +2,7 @@
   border-bottom: 1px solid $border-color;
 
   position: relative;
-  padding: 11px 20px 17px;
+  padding: 11px 20px 16px;
 }
 
 .header-menu__logo {
@@ -19,16 +19,6 @@
   &:active {
     opacity: 0.6;
   }
-}
-
-.logo-mobile .st0,
-.logo-desktop .st0 {
-  fill: #fcc305;
-}
-
-.logo-tablet,
-.logo-desktop {
-  display: none;
 }
 
 .header-menu__toggle {
@@ -148,14 +138,6 @@
     height: 57px;
   }
 
-  .logo-mobile {
-    display: none;
-  }
-
-  .logo-tablet {
-    display: inline;
-  }
-
   .header-menu__toggle {
     display: none;
   }
@@ -210,17 +192,13 @@
     height: 60px;
   }
 
-  .logo-tablet {
-    display: none;
-  }
-
-  .logo-desktop {
-    display: inline;
-  }
-
   .header-menu__list {
     font-size: 20px;
     color: $white;
+  }
+
+  .header-menu__item:not(:first-child) {
+    margin-left: 34px;
   }
 
   .header-menu__link {

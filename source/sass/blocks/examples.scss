@@ -1,8 +1,8 @@
 .examples {
   background-color: $bg-color;
 
-  padding-top: 18px;
-  padding-bottom: 35px;
+  padding-top: 17px;
+  padding-bottom: 37px;
 }
 
 .examples__info {
@@ -14,7 +14,7 @@
   @include font-prop(36, 60);
 
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
   padding: 0 20px;
 }
 
@@ -83,14 +83,16 @@
 
 @media (min-width: $tablet-width) {
   .examples {
-    padding-top: 2px;
     padding-bottom: 0;
     background-color: $white;
+    border-top: 1px solid #e6e6e6;
+    margin-top: -22px;
+    padding-top: 42px;
   }
 
   .examples__info {
     padding: 0;
-    padding-bottom: 221px;
+    padding-bottom: 222px;
   }
 
   .examples__heading {
@@ -158,8 +160,11 @@
 @media (min-width: $desktop-width) {
   .examples {
     background: linear-gradient(to right, #f2f2f2 80%, #eaeaea 80%);
+    border-top: none;
 
     position: relative;
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .examples .wrap {
@@ -203,7 +208,7 @@
 
   .examples__expenses {
     margin-left: 0;
-    margin-top: 20px;
+    margin-top: 22px;
     width: 330px;
 
     text-align: left;
