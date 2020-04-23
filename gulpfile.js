@@ -7,6 +7,7 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
+var htmlmin = require("gulp-htmlmin");
 var del = require("del");
 var autoprefixer = require("autoprefixer");
 var csso = require("gulp-csso");
@@ -14,6 +15,7 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+var uglify = require('gulp-uglify');
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -36,7 +38,17 @@ gulp.task("html", function() {
     .pipe(posthtml([
       include()
     ]))
+    .pipe(htmlmin({
+      collapseWhitespace: true,
+      collapseInlineTagWhitespace: true
+    }))
     .pipe(gulp.dest("build"))
+});
+
+gulp.task("javascript", function() {
+  return gulp.src("source/js/script.js")
+    .pipe(uglify())
+    .pipe(gulp.dest("build/js"))
 });
 
 gulp.task("copy", function() {
@@ -104,6 +116,7 @@ gulp.task("build", gulp.series(
   "copy",
   "css",
   "sprite",
-  "html"
+  "html",
+  "javascript"
 ));
 gulp.task("start", gulp.series("build", "server"));
