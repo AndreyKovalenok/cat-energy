@@ -82,6 +82,12 @@
   }
 }
 
+.header-menu__nav {
+  &--disabled {
+    display: none;
+  }
+}
+
 .header-menu__list {
   @include font(21, 20, 500);
   text-transform: uppercase;
@@ -148,6 +154,12 @@
     flex-direction: row;
     justify-content: flex-end;
     height: 100%;
+  }
+
+  .header-menu__nav {
+    &--disabled {
+      display: block;
+    }
   }
 
   .header-menu__item {
