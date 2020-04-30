@@ -35,6 +35,19 @@
 .page-footer__map {
   display: block;
   margin: 0 auto;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -160px;
+  z-index: -1;
+}
+
+.page-footer__iframe {
+  margin: 0;
+  border: none;
+  z-index: 2;
+  position: relative;
+  width: 100%;
 }
 
 .page-footer__map-wrap {
@@ -43,6 +56,24 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    background-image: url("../img/map-pin.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 64px;
+    height: 64px;
+    margin-left: -32px;
+    margin-top: -44px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+  }
 }
 
 .page-footer__bottom {
@@ -193,10 +224,18 @@
 
   .page-footer__map-wrap {
     height: 396px;
+
+    &::after {
+      width: 120px;
+      height: 120px;
+      margin-left: -60px;
+      margin-top: -52px;
+    }
   }
 
   .page-footer__map {
     width: 767px;
+    margin-left: -383px;
   }
 
   .page-footer__bottom {
@@ -272,11 +311,18 @@
   .page-footer__map-wrap {
     height: 400px;
     align-items: flex-start;
+
+    &::after {
+      left: 75%;
+      margin-top: -50px;
+      margin-left: -80px;
+    }
   }
 
   .page-footer__map {
     width: 100%;
     max-width: 1440px;
+    margin-left: -720px;
   }
 
   .page-footer__top {

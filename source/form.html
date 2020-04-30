@@ -25,10 +25,6 @@
                   <img class="header-menu__logo-svg" src="img/logo-mobile.svg" alt="Cat Energy" width="191" height="38">
                 </picture>
               </a>
-              <button class="header-menu__toggle header-menu__toggle--active" type="button">
-                <span class="header-menu__toggle-line"></span>
-                Открыть меню
-              </button>
             </div>
 
             <nav class="header-menu__nav">
@@ -59,25 +55,25 @@
 
         <form class="program-selection__form" action="https://echo.htmlacademy.ru" method="post">
           <fieldset class="program-selection__characteristics-fieldset">
-              <legend class="visually-hidden">Характеристики вашего кота</legend>
+              <h3 class="visually-hidden">Характеристики вашего кота</h3>
               <ul class="program-selection__characteristics-list">
                 <li class="program-selection__characteristics-item">
                   <label for="name" class="program-selection__characteristics-label">Имя:*</label>
-                  <input type="text" class="program-selection__characteristics-input" id="name" placeholder="Барсик" required="">
+                  <input type="text" class="program-selection__characteristics-input" id="name" placeholder="Барсик" required>
                 </li>
                 <li class="program-selection__characteristics-item">
                   <label for="weight" class="program-selection__characteristics-label">Вес&nbsp;(кг):*</label>
-                  <input type="text" class="program-selection__characteristics-input" id="weight" placeholder="7" required="">
+                  <input type="text" class="program-selection__characteristics-input" id="weight" placeholder="7" required>
                 </li>
                 <li class="program-selection__characteristics-item">
                   <label for="age" class="program-selection__characteristics-label">Возраст&nbsp;(лет):</label>
-                  <input type="text" class="program-selection__characteristics-input" id="age" placeholder="7">
+                  <input type="text" class="program-selection__characteristics-input" id="age" placeholder="7" size="1">
                 </li>
               </ul>
           </fieldset>
 
           <fieldset class="program-selection__select-fieldset">
-              <legend class="visually-hidden">Выбор программы</legend>
+              <h3 class="visually-hidden">Выбор программы</h3>
               <ul class="program-selection__select-list">
                 <li class="program-selection__select-item">
                   <input type="radio" class="program-selection__select-input" name="target" value="Похудение" id="losing" checked="">
@@ -97,7 +93,7 @@
           <fieldset class="program-selection__contacts-fieldset">
             <div class="line-wrap">
               <div class="program-selection__wrap wrap">
-                <legend class="program-selection__contacts-legend">Контактные данные (владельца кота)</legend>
+                <h3 class="program-selection__contacts-legend">Контактные данные (владельца кота)</h3>
               </div>
             </div>
             <div class="program-selection__wrap wrap">
@@ -105,14 +101,14 @@
                 <li class="program-selection__contacts-item">
                   <label for="email" class="program-selection__contacts-label">E-mail:*</label>
                   <input type="email" class="program-selection__contacts-input" id="email" placeholder="kuklachev@gmail.com" required="">
-                  <svg class="program-selection__contacts-svg program-selection__contacts-svg--mail">
+                  <svg class="program-selection__contacts-svg program-selection__contacts-svg--mail" width="17" height="13">
                     <use xlink:href="#icon-mail"></use>
                   </svg>
                 </li>
                 <li class="program-selection__contacts-item">
                   <label for="phone" class="program-selection__contacts-label">Телефон:*</label>
-                  <input type="phone" class="program-selection__contacts-input" id="phone" placeholder="8 (960) 900-60-90" required="">
-                  <svg class="program-selection__contacts-svg program-selection__contacts-svg--phone">
+                  <input type="tel" pattern="\+7\s\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}" class="program-selection__contacts-input" id="phone" placeholder="8 (960) 900-60-90" required="" size="1">
+                  <svg class="program-selection__contacts-svg program-selection__contacts-svg--phone" width="20" height="20">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
                 </li>
@@ -123,7 +119,7 @@
           <fieldset class="program-selection__comment-fieldset">
             <div class="line-wrap">
               <div class="program-selection__wrap wrap">
-                <legend class="program-selection__comment-legend">Комментарий</legend>
+                <h3 class="program-selection__comment-legend">Комментарий</h3>
               </div>
             </div>
             <div class="program-selection__wrap wrap">
@@ -134,7 +130,7 @@
           <fieldset class="program-selection__additional-fieldset">
             <div class="line-wrap">
               <div class="program-selection__wrap wrap">
-                <legend class="program-selection__additional-legend">Дополнительно</legend>
+                <h3 class="program-selection__additional-legend">Дополнительно</h3>
               </div>
             </div>
             <div class="program-selection__wrap wrap">
@@ -177,6 +173,7 @@
           <p class="page-footer__address">ул. Большая Конюшенная, д. 19/8 <span class="page-footer__city">Санкт-Петербург</span></p>
         </div>
         <div class="page-footer__map-wrap">
+          <iframe class="page-footer__iframe" src="https://yandex.ru/map-widget/v1/-/CWrwy6kQ" width="320" height="400" style="position:relative;"></iframe>
           <picture>
             <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
@@ -192,13 +189,13 @@
       <div class="wrap">
         <div class="page-footer__bottom">
           <a class="page-footer__logo" href="index.html">
-            <img class="page-footer__logo-svg" src="img/logo-footer.svg" alt="Cat Energy">
+            <img class="page-footer__logo-svg" src="img/logo-footer.svg" alt="Cat Energy" width="128" height="24">
           </a>
 
           <ul class="page-footer__list">
             <li class="page-footer__item">
               <a href="#" class="page-footer__link">
-                <svg class="page-footer__link-svg page-footer__link-svg--vk" aria-labelledby="vk">
+                <svg class="page-footer__link-svg page-footer__link-svg--vk" aria-labelledby="vk" width="22" height="12">
                   <title id="vk">Ссылка ВКонтакте</title>
                   <use xlink:href="#icon-vk"></use>
                 </svg>
@@ -206,14 +203,14 @@
             </li>
             <li class="page-footer__item">
               <a href="#" class="page-footer__link">
-                <svg class="page-footer__link-svg page-footer__link-svg--instagram" aria-labelledby="instagram">
+                <svg class="page-footer__link-svg page-footer__link-svg--instagram" aria-labelledby="instagram" width="22" height="16">
                   <title id="instagram">Ссылка Инстраграм</title>
                   <use xlink:href="#icon-insta"></use>
                 </svg>
               </a>
             </li>
             <li class="page-footer__item">
-              <a href="#" class="page-footer__link page-footer__link--facebook" aria-labelledby="facebook">
+              <a href="#" class="page-footer__link page-footer__link--facebook" aria-labelledby="facebook" width="22" height="19">
                 <svg class="page-footer__link-svg page-footer__link-svg--facebook">
                   <title id="facebook">Ссылка Фейсбук</title>
                   <use xlink:href="#icon-fb"></use>
@@ -225,7 +222,7 @@
           <div class="page-footer__academy">
             <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__link-academy">
               HTML Academy
-              <svg class="page-footer__academy-svg">
+              <svg class="page-footer__academy-svg" width="43" height="42">
                 <use xlink:href="#htmlacademy"></use>
               </svg>
             </a>
@@ -234,5 +231,7 @@
       </div>
     </footer>
 
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
