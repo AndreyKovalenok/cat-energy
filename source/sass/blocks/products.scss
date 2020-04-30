@@ -172,6 +172,8 @@
 
   .products__img-link {
     position: absolute;
+    left: 50%;
+    margin-left: -162px;
     bottom: 303px;
     width: 324px;
     height: 208px;
@@ -249,6 +251,8 @@
 
   .products__img-link {
     width: 245px;
+    left: 0;
+    margin-left: 0;
   }
 
   .products__img {

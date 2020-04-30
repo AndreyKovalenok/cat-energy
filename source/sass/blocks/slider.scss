@@ -25,7 +25,7 @@
 
 .slider__switch-wrap {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   width: 61%;
   margin: 0 auto;
@@ -177,6 +177,12 @@
 
     border-bottom: 1px dotted #bebebe;
     cursor: pointer;
+
+    &:first-child {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
 
     &:hover {
       border-bottom: 1px solid #bebebe;
