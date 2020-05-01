@@ -1,0 +1,25 @@
+.wrap {
+  &--products {
+    text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: 1299px) {
+  .wrap {
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .wrap {
+    max-width: 1300px;
+    padding: 0 40px;
+    margin: 0 auto;
+
+    &--examples {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+}

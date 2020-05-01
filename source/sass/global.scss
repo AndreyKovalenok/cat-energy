@@ -31,21 +31,3 @@ img {
   max-width: 100%;
   height: auto;
 }
-
-.line-wrap {
-  border-top: 3px solid $main-color;
-}
-
-@media (min-width: $tablet-width) and (max-width: 1299px) {
-  .wrap {
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .wrap {
-    max-width: 1300px;
-    padding: 0 40px;
-    margin: 0 auto;
-  }
-}
