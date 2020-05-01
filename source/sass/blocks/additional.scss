@@ -68,7 +68,7 @@
   padding: 10px 0;
 }
 
-.addition__action {
+.additional__action {
   @include font-prop(16, 20);
   @include font-arial;
   color: $white;
@@ -86,7 +86,7 @@
   padding: 188px 59px 41px;
 }
 
-.addition__action-svg {
+.additional__action-svg {
   position: absolute;
   width: 55px;
   height: 60px;
@@ -96,7 +96,7 @@
   margin-top: 15px;
 }
 
-.addition__action-svg path {
+.additional__action-svg path {
   fill: $white;
 }
 
@@ -174,7 +174,7 @@
     padding: 9px 0 11px;
   }
 
-  .addition__action {
+  .additional__action {
     background: url("../img/gift-photo-tablet@1x.jpg") no-repeat center center;
     background-size: cover;
 
@@ -187,7 +187,7 @@
     padding: 72px 123px 68px 423px;
   }
 
-  .addition__action-svg {
+  .additional__action-svg {
     left: 118px;
     top: 50%;
     margin-top: -35px;
@@ -259,7 +259,7 @@
     padding: 11px 0;
   }
 
-  .addition__action {
+  .additional__action {
     background: url("../img/gift-photo-desktop@1x.jpg") no-repeat center center;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -272,7 +272,7 @@
     margin: 0;
   }
 
-  .addition__action-svg {
+  .additional__action-svg {
     left: 50%;
     top: 50px;
 

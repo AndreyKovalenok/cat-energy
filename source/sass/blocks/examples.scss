@@ -47,7 +47,7 @@
   margin-right: 32px;
 }
 
-.expamples__count {
+.examples__count {
   @include font-oswald;
   @include font-prop(24, 24);
   text-transform: uppercase;
@@ -57,7 +57,7 @@
   display: block;
 }
 
-.exmaples__subtitle {
+.examples__subtitle {
   @include font-arial;
   @include font-prop(12, 12);
   color: $font-color;
@@ -122,13 +122,13 @@
     margin-right: 42px;
   }
 
-  .expamples__count {
+  .examples__count {
     @include font-prop(30, 37);
 
     padding: 14px 0 20px;
   }
 
-  .exmaples__subtitle {
+  .examples__subtitle {
     @include font-prop(14, 14);
     background-color: $white;
 
@@ -167,12 +167,6 @@
     padding-top: 0;
   }
 
-  .examples .wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
   .examples__info {
     padding-top: 71px;
     padding-bottom: 0;
@@ -202,7 +196,7 @@
     width: 161px;
   }
 
-  .exmaples__subtitle {
+  .examples__subtitle {
     background-color: $bg-color;
   }
 
